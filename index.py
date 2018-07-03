@@ -9,8 +9,10 @@ from pathlib import Path
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
-token = os.getenv('FB_ACCESS_TOKEN')
-verify_token = os.getenv('FB_VERIFY_TOKEN')
+#token = os.getenv('FB_ACCESS_TOKEN')
+token = os.environ.get('FB_ACCESS_TOKEN')
+#verify_token = os.getenv('FB_VERIFY_TOKEN')
+verify_token = os.environ.get('FB_VERIFY_TOKEN')
 app = Flask(__name__)
 
 
